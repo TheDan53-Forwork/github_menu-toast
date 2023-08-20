@@ -4,6 +4,9 @@ function toast({
     type = "text",
     duration = 3000
 }) {
-    console.log(title, message, type,duration);
+    const main = document.getElementById("toast");
+    if (main) {
+        
+    }
 }
 
