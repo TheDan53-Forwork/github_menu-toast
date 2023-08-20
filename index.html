@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/javascript/main.js"></script>
+    <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css">
+    <title>Toast Menu</title>
+</head>
+<body>
+    <div id="toast" class="toast">
+        <div class="toast__content-status">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <div class="toast__content">
+            <div class="toast__content-header">
+                Thành công!
+            </div>
+            <div class="toast__content-disciption">
+                Bạn đã đăng ký thành công tài khoản tại F8.
+            </div>
+        </div>
+        <div class="toast__close">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+    </div>
+
+    <div class="btn__lists">
+        <div class="btn__item" id="btn__item--success">
+            Show Success Toast
+        </div>
+    
+        <div class="btn__item" id="btn__item--error">
+            Show Error Toast
+        </div>
+    </div>
+
+    <script>
+        var successBtn = document.getElementById("btn__item--success");
+        var errorBtn = document.getElementById("btn__item--error");
+
+        successBtn.onclick = function() {
+            toast({
+                title: "Thành công!",
+                message: "Bạn đã đăng ký thành công tài khoản tại F8.",
+                type: "success",
+                duration: 3000
+            })
+        }
+
+        errorBtn.onclick = function() {
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra, vui lòng liên hệ quản trị viên.",
+                type: "error",
+                duration: 3000
+            })
+        }
+    </script>
+</body>
+</html>
