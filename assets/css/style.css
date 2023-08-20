@@ -5,6 +5,10 @@
     z-index: 100;
 }
 
+.toast + .toast {
+    margin-top: 16px;
+}
+
 .toast {
     display: flex;
     align-items: center;
@@ -13,11 +17,12 @@
     padding: 20px 0;
     min-width: 400px;
     max-width: 450px;
-    border-left: 4px solid;
+    border-left: 4px solid #333;
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    transition: all linear 0.9s;
 }
 
-.toast__content-status {
+.toast__status {
     padding: 0 16px;
     font-size: 24px;
 }
@@ -71,4 +76,22 @@
 
 #btn__item--error {
     background-color: #ff623d;
+}
+
+/* Modifier */
+
+.toast--success {
+    border-left: 4px solid #71be34;
+}
+
+.toast__status--success {
+    color: #71be34;
+}
+
+.toast--error {
+    border-left: 4px solid #ff623d;
+}
+
+.toast__status--error {
+    color: #ff623d;
 }
